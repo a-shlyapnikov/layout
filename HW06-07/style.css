@@ -42,6 +42,11 @@ body {
     padding-left: calc(50% - 570px);
     padding-right: calc(50% - 570px);
 }
+img {
+    overflow-clip-margin: content-box;
+    overflow: clip;
+    max-width: 100%;
+}
 
 
 .header-row {
@@ -69,6 +74,11 @@ body {
     display: flex;
     align-items: center;
     gap: 63px;
+    padding-left: calc(50% - 800px);
+    padding-right: calc(50% - 800px);
+}
+.header-img {
+    width: 50%;
 }
 
 .header-title {
@@ -103,15 +113,6 @@ body {
     gap: 30px;
 }
 
-.offer-item {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 105px 0;
-
-}
-
 .offer-subtitle {
     text-align: center;
     font-size: 16px;
@@ -124,22 +125,22 @@ body {
     font-size: 24px;
     font-weight: 700;
 }
-
-.item1 {
-    background-image: linear-gradient(rgba(33, 22, 22, 0.70), rgba(33, 22, 22, 0.70)), url(img/offer/offer1.png);
+.offer-item {
+    position: relative;
+}
+.item-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
 }
 
-.item2 {
-    background-image: linear-gradient(rgba(33, 22, 22, 0.70), rgba(33, 22, 22, 0.70)), url(img/offer/offer2.png);
-}
-
-.item3 {
-    background-image: linear-gradient(rgba(33, 22, 22, 0.70), rgba(33, 22, 22, 0.70)), url(img/offer/offer3.png);
-}
-
-.item4 {
-    background-image: linear-gradient(rgba(33, 22, 22, 0.70), rgba(33, 22, 22, 0.70)), url(img/offer/offer4.png);
-    padding: 65px 0;
+.item-big {
     grid-column: span 3;
 }
 
@@ -219,4 +220,25 @@ a {
     margin-bottom: 60px;
     background-color: #fff;
     border: #FF6A6A 1px solid;
+}
+
+@media (max-width: 1024px) {
+    .center {
+        padding-left: calc(50% - 367px);
+        padding-right: calc(50% - 367px);
+    }
+
+    .title {
+        font-size: 24px;
+    }
+    
+    .brand {
+        font-size: 44px;
+    }
+    .product-content{
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+    }
+
+    
 }
