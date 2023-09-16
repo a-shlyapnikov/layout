@@ -21,6 +21,12 @@ body {
 
 }
 
+/* .container {
+    max-width: 1146px;
+    margin: 0 auto;
+} */
+
+
 
 .header {
     background: linear-gradient(180deg, #ffffff00 -41.9%, rgba(255, 255, 255, 0.032) 260.24%);
@@ -28,9 +34,9 @@ body {
     padding-bottom: 99px;
 }
 
-.container {
-    width: 1146px;
-    margin: 0 auto;
+.center {
+    padding-left: calc(50% - 573px);
+    padding-right: calc(50% - 573px);
 }
 
 
@@ -60,10 +66,17 @@ body {
     display: flex;
     justify-content: flex-end;
 }
+.logos {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+}
 
 .flex {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    flex-wrap: wrap;
 
 }
 
@@ -81,10 +94,11 @@ body {
     font-weight: 800;
     line-height: 130%;
     margin-bottom: 40px;
+    max-width: 604px;
 }
 
 .description {
-    width: 558px;
+    max-width: 460px;
     font-size: 18px;
     font-style: normal;
     font-weight: 600;
@@ -109,8 +123,11 @@ body {
     border-radius: 5px;
 }
 
+
 .about {
+    gap: 68px;
     margin-bottom: 264px;
+    margin-top: 157px;
 }
 
 
@@ -122,6 +139,7 @@ body {
 }
 
 .heading {
+    max-width: 484px;
     font-size: 40px;
     font-weight: 700;
     line-height: 130%;
@@ -181,8 +199,6 @@ body {
 }
 
 .review {
-    display: flex;
-    justify-content: space-between;
     gap: 25px;
     margin-bottom: 221px;
 }
@@ -193,6 +209,7 @@ body {
 
 
 .review__heading {
+    max-width: 548px;
     font-size: 40px;
     font-weight: 700;
     line-height: 130%;
@@ -200,6 +217,7 @@ body {
 }
 
 .review__text {
+    max-width: 460px;
     font-size: 16px;
     font-weight: 600;
     line-height: 160%;
@@ -252,4 +270,35 @@ body {
     margin-top: 24px;
     display: flex;
     gap: 24px;
+}
+
+@media (max-width: 1024px) {
+    .center{
+        padding-left: calc(50% - 376px);
+        padding-right: calc(50% - 376px);
+
+    }
+    .subtitle {
+        font-size: 16px;
+    }
+    .title {
+        font-size: 48px;
+    }
+    .logos{
+        max-width: 650px;
+        justify-content: center;
+        gap: 32px;
+        margin: auto;
+    }
+    .features{
+        grid-template-columns: repeat(1, 362px);
+        gap: 32px;
+    }
+    .item-big{
+        display: none;
+    }
+    .footer__content {
+        grid-template-columns: repeat(2, 1fr);
+        margin: auto;
+    }
 }
