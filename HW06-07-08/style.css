@@ -42,6 +42,7 @@ body {
     padding-left: calc(50% - 570px);
     padding-right: calc(50% - 570px);
 }
+
 img {
     overflow-clip-margin: content-box;
     overflow: clip;
@@ -55,6 +56,7 @@ img {
     justify-content: space-between;
     padding-top: 18px;
     padding-bottom: 19px;
+    align-items: center
 }
 
 .logo {
@@ -77,6 +79,7 @@ img {
     padding-left: calc(50% - 800px);
     padding-right: calc(50% - 800px);
 }
+
 .header-img {
     width: 50%;
 }
@@ -84,6 +87,15 @@ img {
 .header-title {
     display: flex;
     gap: 16px;
+}
+
+.header-title::before {
+    display: inline-block;
+    content: '';
+    width: 12px;
+    height: 92px;
+    background-color: #F16D7F;
+    ;
 }
 
 .title {
@@ -125,10 +137,12 @@ img {
     font-size: 24px;
     font-weight: 700;
 }
+
 .offer-item {
     position: relative;
 }
-.item-content{
+
+.item-content {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -205,6 +219,7 @@ a {
     font-size: 16px;
     font-weight: 400;
 }
+
 .browse-btn {
     display: flex;
     justify-content: center;
@@ -212,11 +227,11 @@ a {
 
 .browse {
     position: relative;
-    
+
     color: #F26376;
     font-size: 16px;
     font-weight: 400;
-    padding: 1rem 2rem; 
+    padding: 1rem 2rem;
     margin-bottom: 60px;
     background-color: #fff;
     border: #FF6A6A 1px solid;
@@ -227,6 +242,7 @@ a {
         padding-left: calc(50% - 367px);
         padding-right: calc(50% - 367px);
     }
+
     .header-content {
         gap: 39px;
     }
@@ -234,14 +250,71 @@ a {
     .title {
         font-size: 24px;
     }
-    
+
     .brand {
         font-size: 44px;
     }
-    .product-content{
+
+    .product-content {
         grid-template-columns: repeat(2, 1fr);
         gap: 16px;
     }
+}
 
+@media (max-width: 767px) {
+    .center {
+        padding-left: calc(50% - 172px);
+        padding-right: calc(50% - 172px);
+    }
+    .header-content{
+        padding-left: calc(50% - 131px);
+        padding-right: calc(50% - 131px);
+        min-height: 363px;
+
+    }
+
+    .header-img {
+        display: none;
+    }
+
+    .title {
+        font-size: 20px;
+    }
+
+    .brand {
+        font-size: 38px;
+    }
+
+    .header-title::before {
+        height: 61px;
+    }
+
+    .basket {
+        display: none;
+    }
+
+    .personal {
+        display: none;
+    }
+    .offer{
+        padding-bottom: 64px;
+    }
+    .offer-content{
+        grid-template-columns: repeat(auto-fit, 363px);
+        gap: 32px;
+
+    }
+    .item-big{
+        grid-column: span 1;
+        min-height: 111px;
+    
+    }
+    .item-big img{
+        height: 100%;
+        object-fit: cover;
+    }
+    .product-content{
+        grid-template-columns: repeat(1, 1fr);
+    }
     
 }
